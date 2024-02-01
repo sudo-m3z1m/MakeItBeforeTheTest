@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://80x3gv6r3vhu"]
+
+[ext_resource type="PackedScene" uid="uid://bwng780u0niso" path="res://Prefabs/player.tscn" id="1_i714j"]
+[ext_resource type="Texture2D" uid="uid://dwpnuhxpdin85" path="res://icon.svg" id="1_x07fd"]
+[ext_resource type="PackedScene" uid="uid://5d7bue63s1m5" path="res://Prefabs/projectile.tscn" id="3_htpgq"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ir5ow"]
+distance = 11.0
+
+[node name="TestScene" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_ir5ow")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, -0.999878)
+scale = Vector2(13.4219, 0.171873)
+texture = ExtResource("1_x07fd")
+
+[node name="Area2D" parent="." instance=ExtResource("3_htpgq")]
+position = Vector2(3191, 58)
+speed = 1600.0
+
+[node name="Player" parent="." instance=ExtResource("1_i714j")]
+position = Vector2(0, 13)
