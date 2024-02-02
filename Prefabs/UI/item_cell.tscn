@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2trqd1msp06a"]
+
+[ext_resource type="Script" path="res://Prefabs/UI/item_cell.gd" id="1_sdamw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5luw"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[node name="ItemCell" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+focus_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_p5luw")
+script = ExtResource("1_sdamw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -15
+theme_override_constants/margin_top = -15
+theme_override_constants/margin_right = -15
+theme_override_constants/margin_bottom = -15
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 3
+
+[connection signal="focus_entered" from="." to="." method="focus_entered"]

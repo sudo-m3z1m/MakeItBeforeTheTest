@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqo8tb3k1wpr6"]
+
+[ext_resource type="Script" path="res://Prefabs/UI/hud.gd" id="1_2xutk"]
+[ext_resource type="PackedScene" uid="uid://dkpgq4pl12fey" path="res://Prefabs/UI/game_over_hud.tscn" id="1_4hbd7"]
+[ext_resource type="PackedScene" uid="uid://blmclhtj5w5sj" path="res://Prefabs/UI/rest_progress_bar.tscn" id="3_5j7v7"]
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_2xutk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="RestProgressBar" parent="MarginContainer" instance=ExtResource("3_5j7v7")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="GameOverHUD" parent="MarginContainer" instance=ExtResource("1_4hbd7")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

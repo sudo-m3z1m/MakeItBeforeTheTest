@@ -15,6 +15,11 @@ run/main_scene="res://Prefabs/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ExamBase="*res://Prefabs/Exams/exam_base.gd"
+Hud="*res://Prefabs/UI/hud.tscn"
+
 [file_customization]
 
 folder_colors={

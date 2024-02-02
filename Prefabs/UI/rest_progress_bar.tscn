@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://blmclhtj5w5sj"]
+
+[ext_resource type="Script" path="res://Prefabs/UI/rest_progress_bar.gd" id="1_s7ks3"]
+
+[node name="RestProgressBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_s7ks3")
+fill_duration = 0.15
+
+[node name="BarConteiner" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 330.0
+offset_bottom = 53.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="BarConteiner"]
+custom_minimum_size = Vector2(330, 26)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+value = 50.0
+rounded = true
+show_percentage = false
+
+[node name="Label" type="Label" parent="BarConteiner"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Rest amount"
