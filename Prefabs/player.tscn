@@ -1,48 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwng780u0niso"]
+[gd_scene load_steps=4 format=3 uid="uid://b5ypkumc7v2h"]
 
-[ext_resource type="Texture2D" uid="uid://dwpnuhxpdin85" path="res://icon.svg" id="1_1vmym"]
 [ext_resource type="Script" path="res://Prefabs/player.gd" id="1_85so0"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_se3mq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_1vmym")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ntk42"]
+height = 2.75624
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j7gpn"]
-radius = 15.0
-height = 62.0
+[sub_resource type="BoxShape3D" id="BoxShape3D_j4aa2"]
+size = Vector3(1.24634, 2.82446, 1)
 
-[sub_resource type="Animation" id="Animation_h36jw"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_metnq"]
-_data = {
-"RESET": SubResource("Animation_h36jw")
-}
-
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_85so0")
-speed = 300.0
-jump_strenght = 450.0
-gravity = 50.0
+speed = 15.0
+jump_strenght = 20.0
+gravity = 2.0
+front_wall_z = 1.8
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_se3mq")
+[node name="CollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ntk42")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_j7gpn")
+[node name="ItemArea" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
-[node name="Camera" type="Camera2D" parent="."]
-drag_vertical_enabled = true
+[node name="CollisionShape" type="CollisionShape3D" parent="ItemArea"]
+shape = SubResource("BoxShape3D_j4aa2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_metnq")
-}
+[node name="Model" type="CSGBox3D" parent="."]
+size = Vector3(1, 2.7832, 1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.969604, 0.244681, 0, -0.244681, 0.969604, 0, 1.93562, 5.89858)
+fov = 90.0
+
+[connection signal="area_entered" from="ItemArea" to="." method="area_entered"]

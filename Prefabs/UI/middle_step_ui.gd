@@ -23,7 +23,8 @@ func prepare_button_pressed():
 	exams_container.add_child(first_exam_ui)
 	exams_container.add_child(second_exam_ui)
 	
-	first_exam_ui.exam = ExamBase.exams[randi() % ExamBase.exams.size()]
+	#first_exam_ui.exam = ExamBase.exams[randi() % ExamBase.exams.size()]
+	first_exam_ui.exam = ExamBase.exams[0]
 	second_exam_ui.exam = ExamBase.exams[randi() % ExamBase.exams.size()]
 	
 	new_alpha.a = 0

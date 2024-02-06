@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb7k16rea3jtd"]
+
+[ext_resource type="Script" path="res://Prefabs/Items/item_pickabe.gd" id="1_jt6o8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ob1rm"]
+
+[node name="ItemPickabe" type="Area3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_jt6o8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ob1rm")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]

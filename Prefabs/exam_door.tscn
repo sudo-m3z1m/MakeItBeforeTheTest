@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnaebvxj6ghwo"]
+
+[ext_resource type="Script" path="res://Prefabs/exam_door.gd" id="1_w6tw4"]
+[ext_resource type="PackedScene" uid="uid://cs8mr85o7k8j0" path="res://Prefabs/UI/exam_step_ui.tscn" id="2_acxr0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uw2wc"]
+size = Vector3(1.96191, 3.43066, 3.49121)
+
+[node name="ExamDoor" type="Area3D"]
+script = ExtResource("1_w6tw4")
+exam_packed = ExtResource("2_acxr0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.352318, 0.328833, -0.397174)
+shape = SubResource("BoxShape3D_uw2wc")
+
+[connection signal="body_entered" from="." to="." method="body_entered"]

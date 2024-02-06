@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://qmasqy0k7tgh"]
+
+[ext_resource type="PackedScene" uid="uid://bqxo1ifwtxtc4" path="res://Models/stairs.glb" id="1_su6it"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pmnf3"]
+size = Vector3(7.52151, 0.19165, 1)
+
+[node name="Stairs" type="StaticBody3D"]
+
+[node name="stairs" parent="." instance=ExtResource("1_su6it")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, 0.688843, 0.640689, 0)
+shape = SubResource("BoxShape3D_pmnf3")

@@ -3,6 +3,7 @@ extends Node
 class_name ExBase
 
 var exams: Array[Exam]
+var collected_items: Array[Item]
 var default_ready_level: int = 1
 var rest_level: float = 50:
 	set(new_rest_level):
@@ -45,6 +46,11 @@ func is_exam_exist(exam: Exam) -> int:
 		if ex.exam == exam_type:
 			return exams.find(ex)
 	return 0
+
+func add_item(item: Item) -> void:
+	if collected_items.size() >= 3:
+		return
+	collected_items.append(item)
 
 #func append_exam_to_array(new_exam: Exam) -> void:
 	#if is_exam_exist(new_exam):

@@ -18,7 +18,9 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_1eybx")
 passing_time = 60
+start_solving_value = 500.0
 max_chance = 101
+prepare_scene_packed = "res://Prefabs/UI/middle_step_ui.tscn"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -70,14 +72,14 @@ theme_override_constants/separation = 15
 
 [node name="ItemCell" parent="MarginContainer/HBoxContainer2" instance=ExtResource("2_yt4ep")]
 layout_mode = 2
-item_path = "res://Prefabs/Items/smartphone.gd"
 
 [node name="ItemCell2" parent="MarginContainer/HBoxContainer2" instance=ExtResource("2_yt4ep")]
 layout_mode = 2
 
 [node name="ItemCell3" parent="MarginContainer/HBoxContainer2" instance=ExtResource("2_yt4ep")]
 layout_mode = 2
-item_path = "res://Prefabs/Items/smartphone.gd"
 
 [node name="PassingTimer" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="value_changed" from="MarginContainer/HBoxContainer/ProgressBar" to="." method="bar_value_changed"]
