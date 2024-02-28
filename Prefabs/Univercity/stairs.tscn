@@ -6,6 +6,7 @@
 size = Vector3(7.52151, 0.19165, 1)
 
 [node name="Stairs" type="StaticBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="stairs" parent="." instance=ExtResource("1_su6it")]
 

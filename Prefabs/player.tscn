@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5ypkumc7v2h"]
+[gd_scene load_steps=6 format=3 uid="uid://b5ypkumc7v2h"]
 
 [ext_resource type="Script" path="res://Prefabs/player.gd" id="1_85so0"]
+[ext_resource type="Shader" path="res://Prefabs/Univercity/upstairs.gdshader" id="2_y1xst"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ntk42"]
-height = 2.75624
+height = 2.76112
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j4aa2"]
 size = Vector3(1.24634, 2.82446, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2c0gd"]
+render_priority = 0
+shader = ExtResource("2_y1xst")
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_85so0")
@@ -29,7 +34,17 @@ shape = SubResource("BoxShape3D_j4aa2")
 size = Vector3(1, 2.7832, 1)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.969604, 0.244681, 0, -0.244681, 0.969604, 0, 1.93562, 5.89858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 fov = 90.0
+
+[node name="VisibleSphere" type="CSGSphere3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.10997)
+radius = 0.1
+radial_segments = 24
+rings = 12
+material = SubResource("ShaderMaterial_2c0gd")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, 0)
 
 [connection signal="area_entered" from="ItemArea" to="." method="area_entered"]

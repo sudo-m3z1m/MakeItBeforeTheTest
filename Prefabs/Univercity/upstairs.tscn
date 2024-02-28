@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://xfrtebuk3f2j"]
+
+[ext_resource type="PackedScene" uid="uid://qmasqy0k7tgh" path="res://Prefabs/Univercity/stairs.tscn" id="1_2kw4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iy3iq"]
+render_priority = -1
+transparency = 1
+albedo_color = Color(0, 0.407843, 1, 1)
+
+[node name="Upstairs" type="Node3D"]
+
+[node name="FrontWall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.28157, 3.18041)
+use_collision = true
+size = Vector3(13.1016, 14.323, 0.142578)
+material = SubResource("StandardMaterial3D_iy3iq")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="FrontWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75735, -6.09024, 0)
+operation = 2
+size = Vector3(2.6665, 2.21979, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="FrontWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75735, -1.52813, 0)
+operation = 2
+size = Vector3(2.6665, 2.21979, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="FrontWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75735, 3.09685, 0)
+operation = 2
+size = Vector3(2.6665, 2.21979, 1)
+
+[node name="FirstFloorCell" type="Node3D" parent="."]
+
+[node name="FirstFloor" type="CSGBox3D" parent="FirstFloorCell"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00952148)
+use_collision = true
+size = Vector3(13.0566, 0.2, 6.50342)
+
+[node name="FirstMiddleFloor" type="CSGBox3D" parent="FirstFloorCell"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127147, 2.44081, 0)
+use_collision = true
+size = Vector3(13.0566, 0.2, 6.48438)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="FirstFloorCell/FirstMiddleFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.730606, -0.20766, 0.0578384)
+operation = 2
+size = Vector3(7.61832, 0.678711, 2.09367)
+
+[node name="Stairs" parent="FirstFloorCell" instance=ExtResource("1_2kw4a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.555704, 0)
+
+[node name="Stairs2" parent="FirstFloorCell" instance=ExtResource("1_2kw4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79499, -1.91598)
+
+[node name="SecondFloorCell" type="Node3D" parent="."]
+
+[node name="SecondFloor" type="CSGBox3D" parent="SecondFloorCell"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.65388, 0)
+use_collision = true
+size = Vector3(13.0566, 0.2, 6.48438)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SecondFloorCell/SecondFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09308, -0.20766, -0.857162)
+operation = 2
+size = Vector3(8.18396, 0.678711, 3.92368)
+
+[node name="Stairs3" parent="SecondFloorCell" instance=ExtResource("1_2kw4a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 5.2134, 0)
+
+[node name="SecondMiddleFloor" type="CSGBox3D" parent="SecondFloorCell"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127147, 7.08232, 0)
+use_collision = true
+size = Vector3(13.0566, 0.2, 6.48438)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SecondFloorCell/SecondMiddleFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.730606, -0.20766, 0.0578384)
+operation = 2
+size = Vector3(7.61832, 0.678711, 2.09367)
+
+[node name="Stairs4" parent="SecondFloorCell" instance=ExtResource("1_2kw4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.43651, -1.91598)
+
+[node name="ThirdFloorCell" type="Node3D" parent="."]
+
+[node name="ThirdFloor" type="CSGBox3D" parent="ThirdFloorCell"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.2954, 0)
+use_collision = true
+size = Vector3(13.0566, 0.2, 6.48438)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="ThirdFloorCell/ThirdFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09308, -0.20766, -0.857162)
+operation = 2
+size = Vector3(8.18396, 0.678711, 3.92368)
+
+[node name="Stairs5" parent="ThirdFloorCell" instance=ExtResource("1_2kw4a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 9.91825, 0)
+
+[node name="CameraPosition" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 15)

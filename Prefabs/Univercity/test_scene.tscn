@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://l2rsawse8j1x"]
+
+[ext_resource type="Texture2D" uid="uid://dwpnuhxpdin85" path="res://icon.svg" id="1_agc3g"]
+[ext_resource type="PackedScene" uid="uid://b5ypkumc7v2h" path="res://Prefabs/player.tscn" id="2_kblx5"]
+[ext_resource type="PackedScene" uid="uid://dnaebvxj6ghwo" path="res://Prefabs/Univercity/exam_door.tscn" id="3_xpkbc"]
+[ext_resource type="PackedScene" uid="uid://cb7k16rea3jtd" path="res://Prefabs/Items/item_pickabe.tscn" id="4_wuphq"]
+[ext_resource type="PackedScene" uid="uid://xfrtebuk3f2j" path="res://Prefabs/Univercity/upstairs.tscn" id="5_ohu2p"]
+[ext_resource type="PackedScene" uid="uid://4gy5qsd1q6jk" path="res://Prefabs/Univercity/crowd.tscn" id="6_2igg3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrxs7"]
+albedo_texture = ExtResource("1_agc3g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilteh"]
+albedo_color = Color(0, 0.407843, 1, 1)
+
+[sub_resource type="Environment" id="Environment_kc4n5"]
+
+[node name="TestScene" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0382, -2.41226, 0.33829)
+use_collision = true
+size = Vector3(65.3602, 5.31885, 3.83179)
+material = SubResource("StandardMaterial3D_qrxs7")
+
+[node name="Player" parent="." instance=ExtResource("2_kblx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60729, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.79653, 0.604599, 0, -0.604599, 0.79653, 10.6558, 8.47662, 10.9282)
+shadow_enabled = true
+
+[node name="ExamDoor" parent="." instance=ExtResource("3_xpkbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.9258, 8.97884, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="ExamDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.601501, 0.364999, -0.240967)
+size = Vector3(2.203, 3.59717, 1.48193)
+
+[node name="ItemPickabe" parent="." instance=ExtResource("4_wuphq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.60383, 1.00479, 0)
+item_path = "res://Prefabs/Items/smartphone.gd"
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.9837, 11.6421, -5.99272)
+use_collision = true
+size = Vector3(47.2165, 22.9422, 9.18701)
+material = SubResource("StandardMaterial3D_ilteh")
+
+[node name="Upstairs" parent="." instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 0.0287373, -6.62322)
+
+[node name="SecondFloor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.146, 7.48546, 0.359741)
+use_collision = true
+size = Vector3(65.5642, 0.162109, 3.76733)
+
+[node name="ThirdFloor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.146, 14.8803, 0.465437)
+use_collision = true
+size = Vector3(65.5642, 0.162109, 3.76733)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kc4n5")
+
+[node name="Crowd" parent="." instance=ExtResource("6_2igg3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.44321, 31.253, 0.968542, 0)

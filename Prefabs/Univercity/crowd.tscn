@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://4gy5qsd1q6jk"]
+
+[ext_resource type="Script" path="res://Prefabs/Univercity/crowd.gd" id="1_2wy8e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ctwl"]
+size = Vector3(2.08008, 2.36926, 1)
+
+[node name="Crowd" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.44321, 0, 0, 0)
+script = ExtResource("1_2wy8e")
+speed_debuff_multiplier = 0.1
+
+[node name="CrowdArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CrowdArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.684631, 0)
+shape = SubResource("BoxShape3D_4ctwl")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.651367, 0)
+size = Vector3(2.01001, 2.30273, 1)
