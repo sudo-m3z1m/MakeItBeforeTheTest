@@ -56,17 +56,11 @@ transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9305, 0.0287373, -6
 [node name="Upstairs3" parent="." instance=ExtResource("5_ohu2p")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 7.47432, -6.62322)
 
-[node name="FrontWall" parent="Upstairs3" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78432, 3.18041)
-
 [node name="CSGBox3D2" parent="Upstairs3/FirstFloorCell/FirstFloor" index="0"]
 visible = true
 
 [node name="Upstairs4" parent="." instance=ExtResource("5_ohu2p")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 7.47432, -6.62322)
-
-[node name="FrontWall" parent="Upstairs4" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78432, 3.18041)
 
 [node name="CSGBox3D2" parent="Upstairs4/FirstFloorCell/FirstFloor" index="0"]
 visible = true
@@ -74,17 +68,11 @@ visible = true
 [node name="Upstairs5" parent="." instance=ExtResource("5_ohu2p")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 14.9386, -6.62322)
 
-[node name="FrontWall" parent="Upstairs5" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78432, 3.18041)
-
 [node name="CSGBox3D2" parent="Upstairs5/FirstFloorCell/FirstFloor" index="0"]
 visible = true
 
 [node name="Upstairs6" parent="." instance=ExtResource("5_ohu2p")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 22.3656, -6.62322)
-
-[node name="FrontWall" parent="Upstairs6" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78432, 3.18041)
 
 [node name="CSGBox3D2" parent="Upstairs6/FirstFloorCell/FirstFloor" index="0"]
 visible = true
@@ -92,17 +80,11 @@ visible = true
 [node name="Upstairs7" parent="." instance=ExtResource("5_ohu2p")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 22.366, -6.623)
 
-[node name="FrontWall" parent="Upstairs7" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78432, 3.18041)
-
 [node name="CSGBox3D2" parent="Upstairs7/FirstFloorCell/FirstFloor" index="0"]
 visible = true
 
 [node name="Upstairs8" parent="." instance=ExtResource("5_ohu2p")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 14.939, -6.623)
-
-[node name="FrontWall" parent="Upstairs8" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78432, 3.18041)
 
 [node name="CSGBox3D2" parent="Upstairs8/FirstFloorCell/FirstFloor" index="0"]
 visible = true

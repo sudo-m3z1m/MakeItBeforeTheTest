@@ -40,17 +40,18 @@ func generate_week() -> void:
 		exams_base_array.erase(new_exam_type)
 		exams.append(new_exam)
 
-func is_exam_exist(exam: Exam) -> int:
-	var exam_type: EXAM_BASE = exam.exam
-	for ex in exams:
-		if ex.exam == exam_type:
-			return exams.find(ex)
-	return 0
-
 func add_item(item: Item) -> void:
 	if collected_items.size() >= 3:
 		return
 	collected_items.append(item)
+
+#func is_exam_exist(exam: Exam) -> int:
+	#var exam_type: EXAM_BASE = exam.exam
+	#for ex in exams:
+		#if ex.exam == exam_type:
+			#return exams.find(ex)
+	#return 0
+
 
 #func append_exam_to_array(new_exam: Exam) -> void:
 	#if is_exam_exist(new_exam):
