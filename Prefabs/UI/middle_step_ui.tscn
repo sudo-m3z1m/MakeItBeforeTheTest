@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bli5c54ad58pc"]
+[gd_scene load_steps=5 format=3 uid="uid://bli5c54ad58pc"]
 
 [ext_resource type="PackedScene" uid="uid://cym68khtyqxv8" path="res://Prefabs/UI/exam_ui.tscn" id="1_l8v1w"]
 [ext_resource type="Script" path="res://Prefabs/UI/middle_step_ui.gd" id="1_y6qtf"]
+[ext_resource type="PackedScene" uid="uid://dl8p20a18bot2" path="res://Prefabs/UI/exam_week_ui.tscn" id="3_mw1qm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jltqv"]
+bg_color = Color(0.219608, 0.219608, 0.219608, 0.870588)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.337255)
+shadow_size = 10
 
 [node name="MiddleStepUI" type="Control"]
 layout_mode = 3
@@ -13,6 +23,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_y6qtf")
 exam_ui_packed = ExtResource("1_l8v1w")
+exam_week_ui_packed = ExtResource("3_mw1qm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,6 +32,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="WeekButton" type="Button" parent="."]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+offset_left = 1007.0
+offset_top = 15.0
+offset_right = 1137.0
+offset_bottom = 55.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+focus_mode = 0
+text = "Show week"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -32,6 +55,8 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
 [node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -67,5 +92,56 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
 
+[node name="WeekPanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1100, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jltqv")
+
+[node name="MarginContainer" type="MarginContainer" parent="WeekPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 15
+
+[node name="DayWeekContainer" type="HBoxContainer" parent="WeekPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="TodayLabel" type="Label" parent="WeekPanel/MarginContainer/DayWeekContainer"]
+layout_mode = 2
+text = "Today: "
+
+[node name="DayLabel" type="Label" parent="WeekPanel/MarginContainer/DayWeekContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.294118, 0.701961, 0, 1)
+text = "null"
+
+[node name="ExamDaysWeekContainer" type="HBoxContainer" parent="WeekPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[connection signal="pressed" from="WeekButton" to="." method="week_button_pressed"]
 [connection signal="pressed" from="MarginContainer/ButtonsContainer/PlayButton" to="." method="play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/ButtonsContainer/PrepareButton" to="." method="prepare_button_pressed"]

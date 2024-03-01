@@ -28,6 +28,28 @@ enum EXAM_BASE {
 	HISTORY
 }
 
+var exam_names: Dictionary = {
+	EXAM_BASE.PHILOSOPHY : "Philosophy",
+	EXAM_BASE.MATH : "Math",
+	EXAM_BASE.CHEMISTRY : "Chemistry",
+	EXAM_BASE.PHYSICS : "Physics",
+	EXAM_BASE.PHYS_TRAINING : "Physical training",
+	EXAM_BASE.INFORMATICS : "Informatics",
+	EXAM_BASE.HISTORY : "History"
+}
+
+var exam_dificults: Dictionary = {
+	2 : "Easy",
+	3 : "Medium",
+	4: "Hard"
+}
+
+var ready_levels: Dictionary = {
+	1 : "Bad",
+	2 : "Simple good", #Need to remake in future
+	3: "Good"
+}
+
 func _ready() -> void:
 	generate_week()
 
