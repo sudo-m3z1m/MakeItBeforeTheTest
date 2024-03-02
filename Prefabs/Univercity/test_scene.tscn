@@ -18,9 +18,9 @@ albedo_color = Color(0, 0.407843, 1, 1)
 [node name="TestScene" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15825, -2.41226, 0.33829)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15825, -2.41226, -6.69107)
 use_collision = true
-size = Vector3(125.12, 5.31885, 3.83179)
+size = Vector3(125.12, 5.31885, 17.8905)
 material = SubResource("StandardMaterial3D_qrxs7")
 
 [node name="Player" parent="." instance=ExtResource("2_kblx5")]
@@ -54,7 +54,7 @@ size = Vector3(26.0532, 34.3514, 9.18701)
 material = SubResource("StandardMaterial3D_ilteh")
 
 [node name="Wall3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.0285, 17.3467, -5.99272)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.7221, 17.3467, -5.97167)
 use_collision = true
 size = Vector3(15.6916, 34.3514, 9.18701)
 material = SubResource("StandardMaterial3D_ilteh")
@@ -87,82 +87,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.44321, 31.253, 0.968542, 0)
 speed_decrease_multiplier = 0.1
 
 [node name="LeftWingUpstairs" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2607, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5, 0, 0)
 
 [node name="Upstairs" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9305, 0.0287373, -6.62322)
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 0, -6.62963)
 
 [node name="Upstairs2" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 7.47432, -6.62322)
-
-[node name="CSGBox3D2" parent="LeftWingUpstairs/Upstairs2/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 7.347, -6.63)
 
 [node name="Upstairs3" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 14.9386, -6.62322)
-
-[node name="CSGBox3D2" parent="LeftWingUpstairs/Upstairs3/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 14.8492, -6.63)
 
 [node name="Upstairs4" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 22.3656, -6.62322)
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 22.297, -6.63)
 
-[node name="CSGBox3D2" parent="LeftWingUpstairs/Upstairs4/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+[node name="Upstairs5" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 29.7131, -6.63)
 
 [node name="RightWingUpstairs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.2543, 0, 0)
 
 [node name="Upstairs" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 0.0287373, -6.62322)
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 0, -6.62963)
 
 [node name="Upstairs2" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 7.47432, -6.62322)
-
-[node name="CSGBox3D2" parent="RightWingUpstairs/Upstairs2/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 7.347, -6.63)
 
 [node name="Upstairs3" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 14.939, -6.623)
-
-[node name="CSGBox3D2" parent="RightWingUpstairs/Upstairs3/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 14.8492, -6.63)
 
 [node name="Upstairs4" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 22.366, -6.623)
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 22.297, -6.63)
 
-[node name="CSGBox3D2" parent="RightWingUpstairs/Upstairs4/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+[node name="Upstairs5" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 29.7131, -6.63)
 
 [node name="MiddleWingUpstairs" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.8866, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
 
 [node name="Upstairs" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.333, 0.0287373, -6.62322)
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 0, -6.62963)
 
 [node name="Upstairs2" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.333, 7.47432, -6.62322)
-
-[node name="CSGBox3D2" parent="MiddleWingUpstairs/Upstairs2/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 7.347, -6.63)
 
 [node name="Upstairs3" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.3333, 14.939, -6.623)
-
-[node name="CSGBox3D2" parent="MiddleWingUpstairs/Upstairs3/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 14.8492, -6.63)
 
 [node name="Upstairs4" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.3333, 22.366, -6.623)
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 22.297, -6.63)
 
-[node name="CSGBox3D2" parent="MiddleWingUpstairs/Upstairs4/FirstFloorCell/FirstFloor" index="0"]
-visible = true
-
-[editable path="LeftWingUpstairs/Upstairs2"]
-[editable path="LeftWingUpstairs/Upstairs3"]
-[editable path="LeftWingUpstairs/Upstairs4"]
-[editable path="RightWingUpstairs/Upstairs2"]
-[editable path="RightWingUpstairs/Upstairs3"]
-[editable path="RightWingUpstairs/Upstairs4"]
-[editable path="MiddleWingUpstairs/Upstairs2"]
-[editable path="MiddleWingUpstairs/Upstairs3"]
-[editable path="MiddleWingUpstairs/Upstairs4"]
+[node name="Upstairs5" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.61, 0, 0, 0, 1.61, 0, 0, 0, 1.61, 0, 29.7131, -6.63)

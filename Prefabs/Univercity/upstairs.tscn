@@ -10,18 +10,13 @@ albedo_color = Color(0, 0.407843, 1, 1)
 [node name="Upstairs" type="Node3D"]
 
 [node name="FrontWall" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.78432, 3.18041)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42331, 3.1845)
 use_collision = true
-size = Vector3(13.1016, 7.32849, 0.142578)
+size = Vector3(13.1016, 4.60648, 0.150757)
 material = SubResource("StandardMaterial3D_iy3iq")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="FrontWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75735, -2.59299, 0)
-operation = 2
-size = Vector3(2.6665, 2.21979, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="FrontWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75735, 1.96912, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75735, -1.2193, 0)
 operation = 2
 size = Vector3(2.6665, 2.21979, 1)
 
@@ -30,11 +25,10 @@ size = Vector3(2.6665, 2.21979, 1)
 [node name="FirstFloor" type="CSGBox3D" parent="FirstFloorCell"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00952148)
 use_collision = true
-size = Vector3(13.0566, 0.2, 6.50342)
+size = Vector3(13.057, 0.308, 6.503)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="FirstFloorCell/FirstFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09308, 0.0933404, -0.866683)
-visible = false
 operation = 2
 size = Vector3(8.18396, 0.678711, 3.92368)
 
@@ -49,7 +43,7 @@ operation = 2
 size = Vector3(7.61832, 0.678711, 2.09367)
 
 [node name="Stairs" parent="FirstFloorCell" instance=ExtResource("1_2kw4a")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.555704, 0)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0.555704, 0)
 
 [node name="Stairs2" parent="FirstFloorCell" instance=ExtResource("1_2kw4a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79499, -1.91598)
@@ -59,7 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79499, -1.91598)
 [node name="SecondFloor" type="CSGBox3D" parent="SecondFloorCell"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.65388, 0)
 use_collision = true
-size = Vector3(13.0566, 0.2, 6.48438)
+size = Vector3(13.057, 0.162, 6.484)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="SecondFloorCell/SecondFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09308, -0.20766, -0.857162)
