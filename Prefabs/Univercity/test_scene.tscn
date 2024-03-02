@@ -18,9 +18,9 @@ albedo_color = Color(0, 0.407843, 1, 1)
 [node name="TestScene" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9942, -2.41226, 0.33829)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15825, -2.41226, 0.33829)
 use_collision = true
-size = Vector3(85.4482, 5.31885, 3.83179)
+size = Vector3(125.12, 5.31885, 3.83179)
 material = SubResource("StandardMaterial3D_qrxs7")
 
 [node name="Player" parent="." instance=ExtResource("2_kblx5")]
@@ -42,72 +42,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.60383, 1.00479, 0)
 item_path = "res://Prefabs/Items/smartphone.gd"
 
 [node name="Wall" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.9837, 17.3467, -5.99272)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7224, 17.3467, -5.99272)
 use_collision = true
-size = Vector3(47.2165, 34.3514, 9.18701)
+size = Vector3(26.0532, 34.3514, 9.18701)
 material = SubResource("StandardMaterial3D_ilteh")
 
-[node name="Upstairs" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 0.0287373, -6.62322)
+[node name="Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7062, 17.3467, -5.99272)
+use_collision = true
+size = Vector3(26.0532, 34.3514, 9.18701)
+material = SubResource("StandardMaterial3D_ilteh")
 
-[node name="Upstairs2" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9305, 0.0287373, -6.62322)
-
-[node name="Upstairs3" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 7.47432, -6.62322)
-
-[node name="CSGBox3D2" parent="Upstairs3/FirstFloorCell/FirstFloor" index="0"]
-visible = true
-
-[node name="Upstairs4" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 7.47432, -6.62322)
-
-[node name="CSGBox3D2" parent="Upstairs4/FirstFloorCell/FirstFloor" index="0"]
-visible = true
-
-[node name="Upstairs5" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 14.9386, -6.62322)
-
-[node name="CSGBox3D2" parent="Upstairs5/FirstFloorCell/FirstFloor" index="0"]
-visible = true
-
-[node name="Upstairs6" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 22.3656, -6.62322)
-
-[node name="CSGBox3D2" parent="Upstairs6/FirstFloorCell/FirstFloor" index="0"]
-visible = true
-
-[node name="Upstairs7" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 22.366, -6.623)
-
-[node name="CSGBox3D2" parent="Upstairs7/FirstFloorCell/FirstFloor" index="0"]
-visible = true
-
-[node name="Upstairs8" parent="." instance=ExtResource("5_ohu2p")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 14.939, -6.623)
-
-[node name="CSGBox3D2" parent="Upstairs8/FirstFloorCell/FirstFloor" index="0"]
-visible = true
+[node name="Wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.0285, 17.3467, -5.99272)
+use_collision = true
+size = Vector3(15.6916, 34.3514, 9.18701)
+material = SubResource("StandardMaterial3D_ilteh")
 
 [node name="SecondFloor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5292, 7.53035, 0.359741)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13024, 7.53035, 0.359741)
 use_collision = true
-size = Vector3(84.7977, 0.162109, 3.76733)
+size = Vector3(125.596, 0.162109, 3.76733)
 
 [node name="ThirdFloor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3891, 15.0081, 0.465437)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.983551, 15.0081, 0.465437)
 use_collision = true
-size = Vector3(85.078, 0.162109, 3.76733)
+size = Vector3(125.889, 0.162109, 3.76733)
 
 [node name="ThirdFloor2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.389, 22.432, 0.465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.995415, 22.432, 0.465)
 use_collision = true
-size = Vector3(85.078, 0.2, 3.767)
+size = Vector3(125.865, 0.2, 3.767)
 
 [node name="ThirdFloor3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.389, 29.8567, 0.465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.707817, 29.8567, 0.465)
 use_collision = true
-size = Vector3(85.078, 0.2, 3.767)
+size = Vector3(126.44, 0.2, 3.767)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kc4n5")
@@ -116,9 +86,83 @@ environment = SubResource("Environment_kc4n5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.44321, 31.253, 0.968542, 0)
 speed_decrease_multiplier = 0.1
 
-[editable path="Upstairs3"]
-[editable path="Upstairs4"]
-[editable path="Upstairs5"]
-[editable path="Upstairs6"]
-[editable path="Upstairs7"]
-[editable path="Upstairs8"]
+[node name="LeftWingUpstairs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2607, 0, 0)
+
+[node name="Upstairs" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9305, 0.0287373, -6.62322)
+
+[node name="Upstairs2" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 7.47432, -6.62322)
+
+[node name="CSGBox3D2" parent="LeftWingUpstairs/Upstairs2/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="Upstairs3" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 14.9386, -6.62322)
+
+[node name="CSGBox3D2" parent="LeftWingUpstairs/Upstairs3/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="Upstairs4" parent="LeftWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -11.9544, 22.3656, -6.62322)
+
+[node name="CSGBox3D2" parent="LeftWingUpstairs/Upstairs4/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="RightWingUpstairs" type="Node3D" parent="."]
+
+[node name="Upstairs" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 0.0287373, -6.62322)
+
+[node name="Upstairs2" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.9267, 7.47432, -6.62322)
+
+[node name="CSGBox3D2" parent="RightWingUpstairs/Upstairs2/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="Upstairs3" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 14.939, -6.623)
+
+[node name="CSGBox3D2" parent="RightWingUpstairs/Upstairs3/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="Upstairs4" parent="RightWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 55.927, 22.366, -6.623)
+
+[node name="CSGBox3D2" parent="RightWingUpstairs/Upstairs4/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="MiddleWingUpstairs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.8866, 0, 0)
+
+[node name="Upstairs" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.333, 0.0287373, -6.62322)
+
+[node name="Upstairs2" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.333, 7.47432, -6.62322)
+
+[node name="CSGBox3D2" parent="MiddleWingUpstairs/Upstairs2/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="Upstairs3" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.3333, 14.939, -6.623)
+
+[node name="CSGBox3D2" parent="MiddleWingUpstairs/Upstairs3/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[node name="Upstairs4" parent="MiddleWingUpstairs" instance=ExtResource("5_ohu2p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 61.3333, 22.366, -6.623)
+
+[node name="CSGBox3D2" parent="MiddleWingUpstairs/Upstairs4/FirstFloorCell/FirstFloor" index="0"]
+visible = true
+
+[editable path="LeftWingUpstairs/Upstairs2"]
+[editable path="LeftWingUpstairs/Upstairs3"]
+[editable path="LeftWingUpstairs/Upstairs4"]
+[editable path="RightWingUpstairs/Upstairs2"]
+[editable path="RightWingUpstairs/Upstairs3"]
+[editable path="RightWingUpstairs/Upstairs4"]
+[editable path="MiddleWingUpstairs/Upstairs2"]
+[editable path="MiddleWingUpstairs/Upstairs3"]
+[editable path="MiddleWingUpstairs/Upstairs4"]
