@@ -9,16 +9,16 @@ albedo_color = Color(0, 0.407843, 1, 1)
 
 [node name="Upstairs" type="Node3D"]
 
-[node name="FrontWall" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42331, 3.1845)
-use_collision = true
-size = Vector3(13.1016, 4.60648, 0.150757)
-material = SubResource("StandardMaterial3D_iy3iq")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="FrontWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75735, -1.2193, 0)
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.40487, 1.20401, 3.1845)
 operation = 2
 size = Vector3(2.6665, 2.21979, 1)
+
+[node name="FrontWall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.43404, 2.42331, 3.1845)
+use_collision = true
+size = Vector3(4.23352, 4.60648, 0.150757)
+material = SubResource("StandardMaterial3D_iy3iq")
 
 [node name="FirstFloorCell" type="Node3D" parent="."]
 
