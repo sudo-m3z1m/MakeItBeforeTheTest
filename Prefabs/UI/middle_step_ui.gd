@@ -50,6 +50,8 @@ func choose_exams() -> void:
 
 func paste_week() -> void:
 	var exam_day: ExamWeekUI
+	
+	today_label.text = str(ExamBase.current_day + 1)
 	for exam in ExamBase.exams:
 		exam_day = exam_week_ui_packed.instantiate()
 		exam_week_container.add_child(exam_day)

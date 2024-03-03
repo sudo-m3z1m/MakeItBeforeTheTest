@@ -3,6 +3,7 @@ extends Node
 class_name ExBase
 
 var exams: Array[Exam]
+var current_day: int = 0
 var collected_items: Array[Item]
 var default_ready_level: int = 1
 var rest_level: float = 50:

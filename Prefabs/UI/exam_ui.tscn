@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Prefabs/UI/exam_ui.gd" id="1_o2csu"]
 [ext_resource type="Texture2D" uid="uid://dwpnuhxpdin85" path="res://icon.svg" id="1_tpnam"]
-[ext_resource type="PackedScene" uid="uid://l2rsawse8j1x" path="res://Prefabs/Univercity/test_scene.tscn" id="2_byswb"]
+[ext_resource type="PackedScene" uid="uid://l2rsawse8j1x" path="res://Prefabs/Univercity/second_step.tscn" id="2_qj10e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75ixu"]
 bg_color = Color(0, 0, 0, 0.466667)
@@ -16,7 +16,7 @@ custom_minimum_size = Vector2(270, 285)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_o2csu")
-run_to_exam_packed = ExtResource("2_byswb")
+run_to_exam_packed = ExtResource("2_qj10e")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(270, 285)

@@ -1,4 +1,5 @@
 extends Area3D
+class_name ExamDoor
 
 @export var exam_packed: PackedScene
 

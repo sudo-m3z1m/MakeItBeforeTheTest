@@ -14,4 +14,8 @@ exam_packed = ExtResource("2_acxr0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.352318, 0.328833, -0.397174)
 shape = SubResource("BoxShape3D_uw2wc")
 
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.315887)
+size = Vector3(5.78931, 4.16016, 4.82623)
+
 [connection signal="body_entered" from="." to="." method="body_entered"]

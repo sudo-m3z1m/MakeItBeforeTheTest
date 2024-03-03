@@ -22,7 +22,7 @@ func _ready() -> void:
 	passing_timer.start(passing_time)
 	passing_timer.timeout.connect(exam_passing_time_over)
 	
-	exam = ExamBase.exams[0]
+	exam = ExamBase.exams[ExamBase.current_day]
 	solving_speed = (exam.ready_level / exam.dificulty) / 2
 	paste_items_to_cells()
 
@@ -55,4 +55,5 @@ func apply_item(used_item: Item, item_cell: Panel) -> void:
 
 func bar_value_changed(value):
 	if value == solving_progress_bar.max_value:
+		ExamBase.current_day += 1
 		get_tree().change_scene_to_packed(load(prepare_scene_packed))
