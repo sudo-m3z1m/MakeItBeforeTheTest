@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhe8jpqucxh2q"]
+
+[ext_resource type="PackedScene" uid="uid://4gy5qsd1q6jk" path="res://Prefabs/Univercity/crowd.tscn" id="1_uwvpf"]
+
+[sub_resource type="Animation" id="Animation_7y8jk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Crowd:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.02923, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Crowd2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.029, 0, -1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Crowd3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.971, 0, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_wdtwy"]
+resource_name = "Z moving"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Crowd:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-5.02923, 0, 0), Vector3(-5.029, 0, -1.5), Vector3(-5.02923, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Crowd2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.029, 0, -1.5), Vector3(-0.029, 0, 1.5), Vector3(-0.029, 0, -1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Crowd3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(4.971, 0, 1.5), Vector3(4.971, 0, -1.5), Vector3(4.971, 0, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3mxf"]
+_data = {
+"RESET": SubResource("Animation_7y8jk"),
+"Z moving": SubResource("Animation_wdtwy")
+}
+
+[node name="CrowdSection" type="Node3D"]
+
+[node name="Crowd" parent="." instance=ExtResource("1_uwvpf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.44321, -5.02923, 0, 0)
+
+[node name="Crowd2" parent="." instance=ExtResource("1_uwvpf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.44321, -0.029, 0, -1.5)
+
+[node name="Crowd3" parent="." instance=ExtResource("1_uwvpf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.44321, 4.971, 0, 1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e3mxf")
+}
+autoplay = "Z moving"
